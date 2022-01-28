@@ -1,0 +1,89 @@
+﻿@model JPortal.Models.WorkedExpre
+
+@{
+    ViewBag.Title = "Worked Experience";
+}
+
+<div class="myforms GreenText">
+    <div class="form-horizontal">
+        <h2>Worked Experience</h2>
+        <hr />
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5  fieldtextinfo bold">
+                @Html.DisplayFor(model => model.CompanyName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+                @Html.DisplayNameFor(model => model.Industry)
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5  fieldtextinfo bold">
+                @Html.DisplayFor(model => model.Industry)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+                @Html.DisplayNameFor(model => model.Address)
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5  fieldtextinfo bold">
+                @Html.DisplayFor(model => model.Address)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+                @Html.DisplayNameFor(model => model.PositionHeld)
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5  fieldtextinfo bold">
+                @Html.DisplayFor(model => model.PositionHeld)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+                @Html.DisplayNameFor(model => model.JobDescription)
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5  fieldtextinfo bold">
+                @Html.DisplayFor(model => model.JobDescription)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+                @Html.DisplayNameFor(model => model.FromDate)
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5  fieldtextinfo bold">
+                @Html.DisplayFor(model => model.FromDate)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+                @Html.DisplayNameFor(model => model.ToDate)
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5  fieldtextinfo bold">
+                @Html.DisplayFor(model => model.ToDate)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 ">
+                <br /><br />
+            </div>
+        </div>
+    <p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-2">
+                <span class="btn btn-success">  @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "whiteText" })  </span>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-2 col-md-offset-4 ">
+                <span class="btn btn-primary">  @Html.ActionLink("Back to List", "Index", null, new { @class = "whiteText" })  </span>
+
+            </div>
+        </div>
+    </p>
+    </div>
+</div>
+        
+    @*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

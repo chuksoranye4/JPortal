@@ -1,0 +1,165 @@
+﻿@model  JPortal.Models.JobList
+
+
+    @*@ViewBag.Title = model => model.CompanyName;*@
+
+<h2>@Html.DisplayFor(model => model.JobTitle)</h2>
+<h5>@Html.DisplayFor(model => model.CompanyName)</h5>
+<div>   
+    <hr />
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1  fieldtext ">
+            @Html.DisplayNameFor(model => model.JobLocation)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.JobLocation)
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.RequiredYearsExpreince)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.RequiredYearsExpreince)
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-10 ">
+        &nbsp;&nbsp;
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext ">
+            @Html.DisplayNameFor(model => model.DesiredCourse)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.DesiredCourse)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.JobDetails)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.JobDetails)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.JobDescription)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.Salary)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.Salary)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.StateID)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.State.Name)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.Country)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.Country1.Name)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.PostedDate)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.PostedDate)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.ExpDate)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.ExpDate)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-md-offset-1 fieldtext">
+            @Html.DisplayNameFor(model => model.JobCategory.CategoryName)
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 fieldtextinfo">
+            @Html.DisplayFor(model => model.JobCategory.CategoryName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 ">
+            &nbsp;&nbsp; &nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3col-md-offset-1 ">
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 btn btn-default">
+            @Html.ActionLink("Apply", "Apply", "JobsApplies", new { id = Model.Id }, null)
+                @*@Html.ActionLink("Apply", "JobLists", "Edit", new { id = Model.Id }, null)*@
+        </div>
+    </div>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")*@
+</p>

@@ -1,0 +1,28 @@
+﻿/*adding the template css*/
+*{margin:0px;padding:0px;}
+#bgbasic{background-image:url(../Images/bg.gif);background-position:top left;background-repeat:repeat-x;}
+#basicwidth{width:75%;margin:0 auto;}
+body{width:100%;margin:0 auto;font-family:Arial, Helvetica, sans-serif;font-size:11px;}
+#header{height:50px;padding:0 0 0 0px;position:relative;}
+.meta{color:#F5F5F5;background-image:url(../Images/meta_bg.gif);background-position:top right;background-repeat:no-repeat;height:36px;width:100%;overflow:hidden;}
+.meta a{color:#92DF01;text-decoration:underline}
+.meta a:visited{text-decoration:underline}
+.meta a:hover{text-decoration:none}
+.meta p{display:block;float:right;line-height:18px;}
+.metalinks{height:23px;margin:0 0 0 22px;padding:13px 0 0 0;float:right;text-align:center;}
+.metalinks a{margin:0 10px 0 7px}
+.logo{float:left;}
+.colorwhite{color:white; font-size:12px;font-weight:bold !important}
+.bold{font-weight:bolder; font-size:larger;}
+.fieldtext{ font-weight:bold; font-size:14px;color:#337ab7;}
+.fieldtextinfo{  font-size:14px;}
+.JobTitle{ font-weight:bold; font-size:25px;color:blue;text-decoration:underline;}
+.paddingspace{padding-top:20px}
+.searchbg{background-color:green; text-align:center; border-radius:5px 5px 5px 5px; height:60px; padding-top:12px;}
+.slogan{display:block;position:absolute;top:25px;left:70px;}
+.btn-success {font-size:larger;font-weight:bolder; z-index:100;text-decoration-color:white; text-decoration:underline !important}
+.space {padding:25px;}
+.labelFor{display:block;font-weight: bold;}
+.whiteText{color:white;font-size:14px;font-weight:bold;}	
+.GreenText{color:Green;}
+div.myforms,div.form{clear:both; border-bottom: 1px dashed gray; padding: 5px 0 8px 0; font-family:'Comic Sans MS';}

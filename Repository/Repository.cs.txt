@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace Students.Repository
+{
+    public class Repository<T> : IRepository<T> where T : class
+    {
+        public unitofworkContext context;
+        public unitofworkSet<T> unitofworkset;
+        public Repository(unitofworkContext context)
+        {
+            this.context = context;
+            unitofworkset = context.Set<T>();
+        }
+        public Repository()
+        {
+
+        }
+
+
+        public T GetById(int id)
+        {
+            return unitofworkset.Find(id);
+        }
+
+        public IEnumerable<T> GetAll()
+        {
+            return unitofworkset.ToList();
+        }
+        public void Insert(T entity)
+        {
+            unitofworkset.Add(entity);
+        }
+
+        public void Edit(T entity)
+        {
+            context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public void Delete(T entity)
+        {
+            context.Entry(entity).State = EntityState.Deleted;
+        }
+
+        public void Save()
+        {
+            context.SaveChanges();
+        }
+
+        private bool disposed = false;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+            }
+            this.disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<JPortal.Models.JobPreference>
+
+@{
+    ViewBag.Title = "Job Preference";
+}
+<div class="myforms GreenText">
+    <h2>Job Preference</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobCategory.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.State.Name)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobCategory.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.State.Name)
+                    </td>
+                    <td>
+                        <span class="btn btn-primary">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "whiteText" })
+                        </span>
+                        @{ var Url = "JobPreferences/Delete/" + item.Id; }
+                        <span class="btn btn-danger">
+                            <a href=@Url onclick="JavaScript:return confirm('Are You Sure')" class="whiteText">Delete</a>
+                        </span>
+                    </td>
+                </tr>
+            }
+
+        </table>
+</div>
+</div>
+<br />
+<p>
+    <span class="btn btn-success">
+        @Html.ActionLink("Add More Preference.", "Create", null, new { @class = "whiteText" })
+    </span>
+</p>

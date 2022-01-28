@@ -1,0 +1,65 @@
+﻿@model IEnumerable<JPortal.Models.WorkedExpre>
+
+@{
+    ViewBag.Title = "Work Experience";
+}
+<div class="myforms GreenText">
+    <h2>Work Experience</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PositionHeld)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FromDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ToDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PositionHeld)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FromDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ToDate)
+                    </td>
+                    <td>
+                     @{ var Url2 = "WorkedExpres/Details/" + item.Id; }
+                    <span class="btn btn-info">
+                        <a href=@Url2 class="whiteText">View</a>
+                    </span>
+                        <span class="btn btn-primary">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "whiteText" })
+                        </span>
+                        @{ var Url = "WorkedExpres/Delete/" + item.Id; }
+                        <span class="btn btn-danger">
+                            <a href=@Url onclick="JavaScript:return confirm('Are You Sure')" class="whiteText">Delete</a>
+                        </span>                        
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<br />
+<p>
+    <span class="btn btn-success">
+        @Html.ActionLink("Add New", "Create", null, new { @class = "whiteText" })
+    </span>
+</p>

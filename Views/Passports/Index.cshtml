@@ -1,0 +1,41 @@
+﻿@model IEnumerable<JPortal.Models.Passport>
+
+@{
+    ViewBag.Title = "Passport";
+}
+@*@Html.DisplayNameFor(model => model.Img)*@
+
+@foreach (var item in Model)
+{
+
+    <div class="myforms GreenText">
+        <div class="form-horizontal">
+            <h2>Passport</h2>
+            <hr />
+            <span class="text-danger">  @Html.ValidationSummary()</span>
+            <span class="field-validation-error text-danger" id="spanfile"></span>
+            <div class="form-group">
+                <span class="control-label col-md-5 col-md-offset-0"><img src=@item.Img alt="My Passport" class="img-thumbnail img-responsive" width="100" height="100"></span>
+              </div>  
+            <div class="form-group">              
+                <div class="control-label col-md-5 col-md-offset-0">
+                    @{ var Url = "Passports/Delete/" + item.Id; }
+                    <span class="btn btn-danger">
+                        <a href=@Url onclick="JavaScript:return confirm('Are You Sure')" class="whiteText glyphicon glyphicon-trash">Delete</a>
+                    </span>
+                   @* <span class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "whiteText  glyphicon glyphicon-trash glyphicon-left" }) </span>*@
+                </div>
+            </div>           
+        </div>
+    </div>
+}
+
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Img)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>*@
+          

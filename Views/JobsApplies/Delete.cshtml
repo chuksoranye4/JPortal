@@ -1,0 +1,72 @@
+﻿@model JPortal.Models.JobsApply
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>JobsApply</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AppliedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppliedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser1.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser1.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobList.PostedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobList.PostedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobsApplies1.PostedByID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobsApplies1.PostedByID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobsApply1.PostedByID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobsApply1.PostedByID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

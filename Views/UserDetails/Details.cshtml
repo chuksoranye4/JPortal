@@ -1,0 +1,97 @@
+﻿@model JPortal.Models.UserDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="form-horizonta">
+    <h4>UserDetail</h4>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 control-label ">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.FirstName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.LastName)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.LastName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.MiddleName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.Address)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.Address)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.MaritalStatu.Status)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.MaritalStatu.Status)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.Sex.Sex1)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.Sex.Sex1)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.Country.Name)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.Country.Name)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-3 ">
+            @Html.DisplayNameFor(model => model.State.Name)
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-8">
+            @Html.DisplayFor(model => model.State.Name)
+        </div>
+    </div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

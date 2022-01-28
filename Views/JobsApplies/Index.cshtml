@@ -1,0 +1,40 @@
+﻿@model IEnumerable<JPortal.Models.JobsApply>
+
+@{
+    ViewBag.Title = "Applied Jobs";
+}
+<div class="myforms GreenText">
+    <h2>Applied Jobs</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    <span>Job Title</span>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AppliedDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobList.JobTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AppliedDate)
+                    </td>
+                    <td>
+                        @{ var Url = "JobsApplies/Delete/" + item.Id; }
+                        <span class="btn btn-danger">
+                            <a href=@Url onclick="JavaScript:return confirm('Are You Sure')" class="whiteText">Delete</a>
+                        </span>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

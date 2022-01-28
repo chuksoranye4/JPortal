@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b9612a86a9441fb8d8b196ca9e3899d" Name="Diagram1">
+        <EntityTypeShape EntityType="JobPortalModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.ApplicantApproval" Width="1.5" PointX="8.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.AspNetRole" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.AspNetUser" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.Certification" Width="1.5" PointX="5.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.Country" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.Education" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.JobCategory" Width="1.5" PointX="6" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.JobList" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.JobPreference" Width="1.5" PointX="8.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.JobsApply" Width="1.5" PointX="8.25" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.MaritalStatu" Width="1.5" PointX="3" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.Passport" Width="1.5" PointX="5.25" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.Referee" Width="1.5" PointX="5.25" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.Sex" Width="1.5" PointX="3" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.Skill" Width="1.5" PointX="5.25" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.State" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.UserDetail" Width="1.5" PointX="5.25" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobPortalModel.WorkedExpre" Width="1.5" PointX="5.25" PointY="46.25" IsExpanded="true" />
+        <AssociationConnector Association="JobPortalModel.FK_ApplicantApproval_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_ApplicantApproval_AspNetUsers1" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_ApplicantApproval_JobList" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_Certification_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_Education_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobPreference_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobPreference_AspNetUsers1" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobsApply_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobsApply_AspNetUsers1" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_Passport_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_Referee_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_Skill_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_UserDetail_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_WorkedExpre_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobLists_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_State_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_UserDetail_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobList_JobCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobPreference_JobCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobLists_States" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobsApply_JobList" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobPreference_State" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_JobsApply_JobsApply" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_UserDetail_MaritalStatu" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_UserDetail_Sex" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.FK_UserDetail_State" ManuallyRouted="false" />
+        <AssociationConnector Association="JobPortalModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

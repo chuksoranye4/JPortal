@@ -1,0 +1,65 @@
+﻿@using System.Linq;
+@model PagedList.IPagedList<JPortal.Models.JobList>
+@using PagedList.Mvc;
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<div class="row">
+
+
+        @foreach (var item in Model)
+    {
+            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-7 JobTitle">
+                        @Html.ActionLink(item.JobTitle, "Details", "JobLists", new { id = item.Id }, null) 
+                        @*@Html.DisplayFor(modelItem => item.JobTitle)*@
+                    </div>                    
+                    <div class="col-xs-12 col-sm-8 col-md-3 bold"></div>              
+                    @Html.DisplayFor( modelItem =>  item.PostedDate)
+                </div>
+                   <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-10  bold">
+                        @Html.DisplayFor(modelItem => item.CompanyName)
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-10 ">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-10 ">
+                        @Html.DisplayFor(modelItem => item.JobLocation)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-10 ">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-10">
+                        @Html.DisplayFor(modelItem => item.Salary)
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2 btn btn-default ">
+                        @Html.ActionLink("Apply", "Apply", "JobsApplies", new { id = item.Id }, null)                
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 ">
+                        &nbsp;&nbsp;
+                        <hr/>
+
+
+                    </div>
+                </div>
+ </div>
+ }
+
+    <br />
+  @*  Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount*@
+    @Html.PagedListPager(Model,  page => Url.Action("Index", new { page }))
+</div>

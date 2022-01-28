@@ -1,0 +1,245 @@
+﻿@model JPortal.ViewModel.VmMyCV
+@{
+    ViewBag.Title = "My CV";
+}
+@{
+    var url = Model.passport.Img;
+}
+<div class="myforms GreenText">
+    <div class="form-horizontal">
+        <hr />
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8 col-md-offset-1">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-11 col-md-offset-1">
+                        <h3>
+                            &nbsp;&nbsp;
+                            @Html.DisplayFor(model => model.userDetail.FirstName) &nbsp;&nbsp;
+                            @Html.DisplayFor(model => model.userDetail.LastName) &nbsp;&nbsp;
+                            @Html.DisplayFor(model => model.userDetail.MiddleName)
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-11 col-md-offset-2">
+                        <span>
+                            &nbsp;&nbsp;
+                            @*@Html.DisplayFor(model => model.userDetail.Address) &nbsp;&nbsp;*@
+                            @Html.DisplayFor(model => model.userDetail.PhoneNumber) &nbsp;&nbsp;
+                            @Html.DisplayFor(model => model.aspNetUser.Email)
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-11 col-md-offset-1">
+                        <h5>
+                            &nbsp;&nbsp;
+                            @Html.DisplayFor(model => model.userDetail.Address) &nbsp;&nbsp;
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <span><img src=@url alt="My Passport" class="img-circle img-responsive" width="80" height="80"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h4 class="text-primary bold">Education</h4>
+                @*<p class="bg-primary">Education</p>*@
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>
+                                Institution Name
+                            </th>
+                            <th>
+                                Course
+                            </th>
+                            <th>
+                                Qualification
+                            </th>
+                            <th>
+                                start Date
+                            </th>
+                            <th>
+                                End Date
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model.education)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Course)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Qualification)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FromDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ToDate)
+                            </td>
+                        </tr>
+                        }
+                    </table>
+                </div>
+                <h4 class="text-primary bold">Professional Certification</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>
+                                    Institution Name
+                                </th>
+                                <th>
+                                    Certification Name
+                                </th>
+                                <th>
+                                    DateObtained
+                                </th>
+                                <th></th>
+                            </tr>
+
+                            @foreach (var item in Model.certification)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NameOfTheBody)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CertficateName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DateObtained)
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+
+                    </div>
+                <h4 class="text-primary bold">Skills</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>
+                                    Skill
+                                </th>
+                                <th>
+                                    LeveL
+                                </th>
+                                <th>
+                                    Year of Exprience
+                                </th>
+
+                                <th></th>
+                            </tr>
+                            @foreach (var item in Model.skill)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SkillName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Level)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.YearOfExprience)
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                <h4 class="text-primary bold">Work Experience</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>
+                                    Company Name /Organisation
+                                </th>
+                                <th>
+                                    Position Held
+                                </th>
+                                <th>
+                                    Start Date
+                                </th>
+                                <th>
+                                    End Date
+                                </th>
+                                <th></th>
+                            </tr>
+
+                            @foreach (var item in Model.workExpress)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PositionHeld)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FromDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ToDate)
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+
+                <h4 class="text-primary bold">Referee</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    PoneNumber
+                                </th>
+                                <th>
+                                    Relation
+                                </th>
+                                <th></th>
+                            </tr>
+
+                            @foreach (var item in Model.referee)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PoneNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Relation)
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+</div>
+        </div>
+    </div>
+</div>

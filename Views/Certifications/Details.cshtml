@@ -1,0 +1,50 @@
+﻿@model JPortal.Models.Certification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Certification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfTheBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfTheBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CertficateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CertficateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateObtained)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateObtained)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

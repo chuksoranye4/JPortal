@@ -1,0 +1,47 @@
+﻿//using JobPortal.Models;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Web;
+
+//namespace Students.Repository
+//{
+//    public interface IUnitOfWork : IDisposable
+//    {
+//        IRepository<JobPortalEntities> StudentRepository { get; }
+//        void Save();
+//    }
+
+//    public partial class UnitOfWork : IUnitOfWork
+//    {
+//        private IRepository<Student> _studentRepository;
+//        private Context _context;
+
+//        //Add any new repository here 
+
+//        public IRepository<Student> StudentRepository
+//        {
+//            get {
+
+//                if (_studentRepository==null)
+//                    _studentRepository = new Repository<Student>(_context);
+
+//                return _studentRepository; }
+//        }
+
+//        public UnitOfWork()
+//        {
+//            _context=new Context();
+//        }
+
+//        public void Save()
+//        {
+//            _context.SaveChanges();
+//        }
+
+//        public void Dispose()
+//        {
+//            throw new NotImplementedException();
+//        }
+//    }
+//}

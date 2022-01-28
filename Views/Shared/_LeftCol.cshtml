@@ -1,0 +1,88 @@
+﻿
+@{
+    var t = (List<JPortal.Models.JobCategory>)ViewBag.JobCatMaster;
+}
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated & User.IsInRole("Administrator"))
+{
+    <div class="list-group">
+        <a href="#" class="list-group-item active bold">Admin Menu</a>
+        <ul>
+            <li class="list-group-item bold">@Html.ActionLink("Manage User", "JobCategoryList", "JobLists")</li>
+            <li class="list-group-item bold">@Html.ActionLink("Manage Jobs", "JobCategoryList", "JobLists")</li>
+            <li class="list-group-item bold">@Html.ActionLink("Manage Applied Jobs", "JobCategoryList", "JobLists")</li>
+            <li class="list-group-item bold">@Html.ActionLink("Manage Country", "JobCategoryList", "JobLists")</li>
+            <li class="list-group-item bold">@Html.ActionLink("Manage State", "JobCategoryList", "JobLists")</li>
+            <li class="list-group-item bold">@Html.ActionLink("Manage Sex", "JobCategoryList", "JobLists")</li>
+            <li class="list-group-item bold">@Html.ActionLink("Manage Marital Status", "JobCategoryList", "JobLists")</li>
+        </ul>
+    </div>
+    <div class="list-group">
+        <a href="#" class="list-group-item active bold">Job Category</a>
+        <ul>
+            @foreach (var p in t)
+            {
+                <li class="list-group-item bold"> @Html.ActionLink((string)p.CategoryName, "JobCategoryList", "JobLists", new { id = p.Id }, null)</li>
+            }
+        </ul>
+    </div>
+}
+else if (Request.IsAuthenticated & User.IsInRole("Recruiter"))
+{
+    <div class="list-group">    
+        <a href="#" class="list-group-item disabled bold">Recruiter Menu</a>
+        <ul>
+            <li class="list-group-item bold">@Html.ActionLink("Manage Your Posted Jobs", "JobCategoryList", "JobLists")</li>
+            <li class="list-group-item bold">@Html.ActionLink("Manage Your Jobs Applicant", "JobCategoryList", "JobLists")</li>
+        </ul>      
+    </div>
+    <div class="list-group">
+        <a href="#" class="list-group-item active bold">Job Category</a>
+        <ul>
+            @foreach (var p in t)
+            {
+                <li class="list-group-item bold"> @Html.ActionLink((string)p.CategoryName, "JobCategoryList", "JobLists", new { id = p.Id }, null)</li>
+            }
+        </ul>
+    </div>
+}
+@if (Request.IsAuthenticated & User.IsInRole("Applicant"))
+{
+    <div class="list-group">
+        <a href="#" class="list-group-item active bold">User Information</a>
+       <ul> 
+           <li class ="list-group-item bold">@Html.ActionLink("Personal Informaton", "Index", "UserDetails")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Education", "Index", "Educations")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Certification", "Index", "Certifications")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Skills", "Index", "Skills")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Referees", "Index", "Referees")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Work Experience", "Index", "WorkedExpres")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Passport", "Index", "Passports")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Job Preference", "Index", "JobPreferences")</li>
+           <li class="list-group-item bold">@Html.ActionLink("Applied Jobs", "Index", "JobsApplies")</li>
+           <li class="list-group-item bold">@Html.ActionLink("View My CV", "Index", "MyCV")</li>
+        </ul>
+    </div>  
+    <div class="list-group">
+        <a href="#" class="list-group-item active bold">Job Category</a>
+        <ul>
+            @foreach (var p in t)
+            {
+                <li class="list-group-item bold"> @Html.ActionLink((string)p.CategoryName, "JobCategoryList", "JobLists", new { id = p.Id }, null)</li>
+            }
+        </ul>
+    </div>
+}
+else
+{
+    <div class="list-group">
+        <a href="#" class="list-group-item active bold">Job Category</a>
+        <ul>
+            @foreach (var p in t)
+            {
+                <li class="list-group-item bold"> @Html.ActionLink((string)p.CategoryName, "JobCategoryList", "JobLists", new { id = p.Id }, null)</li>
+            }
+        </ul>
+    </div>
+}
+

@@ -1,0 +1,66 @@
+﻿@model JPortal.Models.JobsApply
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobsApply</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AppliedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppliedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser1.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser1.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobList.PostedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobList.PostedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobsApplies1.PostedByID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobsApplies1.PostedByID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobsApply1.PostedByID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobsApply1.PostedByID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

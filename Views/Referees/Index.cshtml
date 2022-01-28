@@ -1,0 +1,61 @@
+﻿@model IEnumerable<JPortal.Models.Referee>
+
+@{
+    ViewBag.Title = "Referee";
+}
+<div class="myforms GreenText">
+    <h2>Referee</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Relation)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Relation)
+                    </td>
+                    <td>
+                        <span class="btn btn-primary">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "whiteText" })
+                        </span>
+                        @{ var Url = "Referees/Delete/" + item.Id; }
+                        <span class="btn btn-danger">
+                            <a href=@Url onclick="JavaScript:return confirm('Are You Sure')" class="whiteText">Delete</a>
+                        </span>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<br />
+<p>
+    <span class="btn btn-success">
+        @Html.ActionLink("Add Referee", "Create", null, new { @class = "whiteText" })
+    </span>
+</p>
